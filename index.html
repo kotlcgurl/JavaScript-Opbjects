@@ -1,0 +1,72 @@
+<html>
+    <script>
+        var circle ={
+            type:"C",
+            measurment1:50,
+            measurment2:0,
+            Area:null
+        }
+        var rectangle= {
+            type:"R",
+            measurment1:10,
+            measurment2:5,
+            Area:null
+        }
+        var righttriangle= {
+            type:"RT",
+            measurment1:30,
+            measurment2:6,
+            Area:null
+        }
+        var square= {
+            type:"S",
+            measurment1:20,
+            measurment2:10,
+            Area:null
+        }
+        var rhombus= {
+            type:"RH",
+            measurment1:15,
+            measurment2:3,
+            Area:null
+        }
+       
+        function FindArea(shape)
+        {
+            if(shape.type=="C")
+            {
+            shape.Area=(22/7)*shape.measurment1*shape.measurment1;
+            }
+            if(shape.type=="R")
+            {
+                shape.Area=shape.measurment1*shape.measurment2;
+            }
+            if(shape.type=="RT")
+            {
+                shape.Area=shape.measurment1*shape.measurment2*(1/2);
+            }
+            if(shape.type=="S")
+            {
+                shape.Area=shape.measurment1*shape.measurment2;
+            }
+            if(shape.type=="RH")
+            {
+                shape.Area=shape.measurment1*shape.measurment2*(1/2);
+            }
+            alert(shape.Area);
+        }
+    </script>
+    <h1>
+        Javascript Function with Object</h1>
+        <br>
+        <button onclick="FindArea(circle)"> Find Area of Circle</button>
+        <br>
+        <button onclick="FindArea(rectangle)"> Find Area of rectangle</button>
+        <br>
+        <button onclick="FindArea(righttriangle)"> Find Area of righttriangle</button>
+        <br>
+        <button onclick="FindArea(square)"> Find Area of square</button>
+        <br>
+        <button onclick="FindArea(rhombus)"> Find Area of rhombus</button>  
+    </h1>
+</html>
